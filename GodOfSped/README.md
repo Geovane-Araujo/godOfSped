@@ -1,8 +1,14 @@
-## God Of Sped
+## What is God Of Sped?
 
-    * Este projeto tem por objetivo facilitar a geração do arquivo fiscal 
-    speed
+God of Sped é uma ferramenta livre e de codigo aberto para geração do 
+arquivo sped
 
-    * Blocos que contemplam este projeto:
+dos blocos qeu são gerados:
 
-        *       
+    - 
+
+referencias:
+
+[Geral](https://www.valor.srv.br/guias/efd-icms-ipi.php)<br/>
+[Blocos](https://www.valor.srv.br/utilidades/util_guias.php?idguiaCapitulo=3&pagina=1)<br/>
+[Guia Pratico](http://sped.rfb.gov.br/item/show/6009)
