@@ -9,10 +9,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Commom" />
       <Folder Include="Controller" />
-      <Folder Include="Enuns" />
+      <Folder Include="Enuns\Informations" />
       <Folder Include="Exceptions" />
-      <Folder Include="Model\NFe" />
       <Folder Include="Repository" />
     </ItemGroup>
 
