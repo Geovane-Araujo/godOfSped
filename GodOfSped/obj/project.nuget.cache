@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "/n4BCUlaMoW8J4zyk158u1om7auMxLWlQbQE2TxHThYY4qslprbIs9OFtXpOHNRVAM2vGhKNd/IzjIe/6w1m3w==",
+  "dgSpecHash": "coaS723J6h3G3Xfx9Y3g6EajynAzmayhj6RooBLTziS2dsqcq5E0p6U/Ba4UXFdhs9w0fOgLMrSBOptP7bseYQ==",
   "success": true,
   "projectFilePath": "/home/geovane/Documentos/Workspace/BackEnd/C#/GodOfSped/GodOfSped/GodOfSped.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/geovane/.nuget/packages/dnsclient/1.6.0/dnsclient.1.6.0.nupkg.sha512",
+    "/home/geovane/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/home/geovane/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "/home/geovane/.nuget/packages/mongodb.bson/2.15.1/mongodb.bson.2.15.1.nupkg.sha512",
+    "/home/geovane/.nuget/packages/mongodb.driver/2.15.1/mongodb.driver.2.15.1.nupkg.sha512",
+    "/home/geovane/.nuget/packages/mongodb.driver.core/2.15.1/mongodb.driver.core.2.15.1.nupkg.sha512",
+    "/home/geovane/.nuget/packages/mongodb.libmongocrypt/1.3.0/mongodb.libmongocrypt.1.3.0.nupkg.sha512",
+    "/home/geovane/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
+    "/home/geovane/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/home/geovane/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/home/geovane/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "/home/geovane/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
