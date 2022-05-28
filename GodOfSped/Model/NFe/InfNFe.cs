@@ -10,13 +10,13 @@ public class InfNFe
 
     public Dest dest { get; set; }
 
-    public Retirada retirada { get; set; }
+    public TLocal retirada { get; set; }
 
-    public Entrega entrega { get; set; }
+    public TLocal entrega { get; set; }
 
     public AutXML autXML { get; set; }
 
-    public Det det { get; set; }
+    public List<Det> det { get; set; }
 
     public Total total { get; set; }
 
@@ -39,7 +39,4 @@ public class InfNFe
     public InfRespTec infRespTec { get; set; }
 
     public InfSolicNFF infSolicNFF { get; set; }
-
-
-
 }
