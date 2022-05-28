@@ -19,7 +19,6 @@
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoF" />
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoI" />
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoM" />
-      <Folder Include="Controller\SpedContribuicoes\Model\BlocoP" />
     </ItemGroup>
 
 </Project>
