@@ -11,7 +11,7 @@ public class Emit
     
     public String xFant { get; set; }
     
-    public Address enderEmit { get; set; }
+    public TEnderEmi enderEmit { get; set; }
     
     public String IE { get; set; }
     

@@ -11,7 +11,7 @@ public class Dest
     
     public String xNome { get; set; }
     
-    public Address enderDest { get; set; }
+    public TEndereco enderDest { get; set; }
     
     public String indIEDest { get; set; }
     

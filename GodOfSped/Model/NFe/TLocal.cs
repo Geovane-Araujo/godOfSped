@@ -2,18 +2,28 @@ using System.ComponentModel;
 
 namespace GodOfSped.Model.NFe;
 
-public class Address
+public class TLocal
 {
+
+    public String CNPJ { get; set; }
+    
+    public String CPF { get; set; }
+    
+    public String xNome { get; set; }
+    
     [Description("Nome da Rua")]
     public String xLgr { get; set; }
     
     [Description("Numero")]
     public String nro { get; set; }
     
+    [Description("Complemento")]
+    public String xCpl { get; set; }
+    
     [Description("Nome do Bairro")]
     public String xBairro { get; set; }
     
-    [Description("NCodigo do Municipio")]
+    [Description("Codigo do Municipio")]
     public String cMun { get; set; }
     
     [Description("Nome do Municipio")]
@@ -33,5 +43,11 @@ public class Address
     
     [Description("Telefone")]
     public String fone { get; set; }
+    
+    [Description("Telefone")]
+    public String email { get; set; }
+    
+    [Description("Telefone")]
+    public String IE { get; set; }
     
 }
