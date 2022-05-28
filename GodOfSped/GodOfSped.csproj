@@ -9,12 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Enuns\Informations" />
-      <Folder Include="Exceptions" />
-      <Folder Include="Repository" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
     </ItemGroup>
 
