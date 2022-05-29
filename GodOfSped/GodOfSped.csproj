@@ -10,6 +10,11 @@
 
     <ItemGroup>
       <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Exported" />
     </ItemGroup>
 
 </Project>

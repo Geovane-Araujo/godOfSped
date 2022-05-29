@@ -9,53 +9,58 @@ namespace GodOfSped.Model.SpedContribuicoes
     public class SpedContribuicoesBlocos
     {
 
-        public String GerarBloco0()
+        public List<String> GerarBloco0()
         {
             return null;
         }
 
-        public String GerarBlocoA()
+        public List<String> GerarBlocoA()
         {
             return null;
         }
 
-        public String GerarBlocoC()
+        public List<String> GerarBlocoC()
         {
             return null;
         }
 
-        public String GerarBlocoD()
+        public List<String> GerarBlocoD()
         {
             return null;
         }
 
 
-        public String GerarBlocoF()
+        public List<String> GerarBlocoF()
         {
             return null;
         }
 
-        public String GerarBlocoI()
+        public List<String> GerarBlocoI()
         {
             return null;
         }
 
-        public String GerarBlocoM()
+        public List<String> GerarBlocoM()
         {
             return null;
         }
 
-        public String GerarBlocoP()
+        public List<String> GerarBlocoP()
         {
             return null;
         }
 
-        public String GerarBloco1()
+        public List<String> GerarBloco1()
         {
             return null;
         }
 
-        public String GerarBloco9()
+        public List<String> GerarBloco9()
+        {
+            return null;
+        }
+
+        public String GerarSped()
         {
             return null;
         }
