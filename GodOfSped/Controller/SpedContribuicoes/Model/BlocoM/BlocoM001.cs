@@ -1,11 +1,11 @@
 ﻿
 namespace GodOfSped.Model.SpedContribuicoes.Model;
 
-public class Bloco9001
+public class BlocoM001
 {
-    public String REG { get; } = "9001";
-
-    public String IND_MOV { get; set; } = "";
+    public String REG { get; } = "M001";
+    
+    public String IND_MOV { get; set; }
     
     
     public String ToString()

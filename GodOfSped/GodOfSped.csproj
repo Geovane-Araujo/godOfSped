@@ -13,12 +13,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controller\SpedContribuicoes\Model\Bloco1" />
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoC" />
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoD" />
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoF" />
       <Folder Include="Controller\SpedContribuicoes\Model\BlocoI" />
-      <Folder Include="Controller\SpedContribuicoes\Model\BlocoM" />
     </ItemGroup>
 
 </Project>
