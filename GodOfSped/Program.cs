@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using GodOfSped;
 using GodOfSped.Commom;
 using GodOfSped.Model.SpedContribuicoes;
+using GodOfSped.Model.SpedContribuicoes.Model;
 
 public class Program
 {
@@ -14,23 +15,18 @@ public class Program
       Console.WriteLine("Olá");
 
       SqlConnection con = Connection.NewInstanceSqlServer("atmusinf_Control-2220");
-
-      List<Hashtable> h = (List<Hashtable>)Persistense.FindByAll(con, "SELECT * FROM nfe");
-
-
-      List<String> retv = new List<string>();
+      SpedContriConfiguration spedContriConfiguration = new();
+      spedContriConfiguration.idpessoa = 0;
+      spedContriConfiguration.cnn = con;
+      spedContriConfiguration.datafim = DateTime.Now;
+      spedContriConfiguration.dataini = DateTime.Now;
       
-      h.ForEach(item =>
-      {
-         String a = "";
-         foreach (var vr in item.Cast<DictionaryEntry>())
-         {
-            a +=  $"{vr.Key}|{vr.Value}\n";
-         }
-         retv.Add(a);
-      });
       
-      ExportFile.GenerateFile(retv);
-      
+
+      SpedContribuicoesBlocos spedContribuicoesBlocos = new(spedContriConfiguration);
+      List<String> list = spedContribuicoesBlocos.GerarBloco0();
+
+      ExportFile.GenerateFile(list);
    }
+   
 }

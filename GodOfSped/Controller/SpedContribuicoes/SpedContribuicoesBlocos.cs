@@ -10,20 +10,29 @@ namespace GodOfSped.Model.SpedContribuicoes
 {
     public class SpedContribuicoesBlocos
     {
-        private SqlConnection con = new();
+        private SpedContriConfiguration _spedContriConfiguration = new();
+        private List<String> bloco0000 = new List<string>();
+        private List<String> bloco0001 = new List<string>();
+        private List<String> bloco0110 = new List<string>();
 
-        public SpedContribuicoesBlocos(String db)
+        public SpedContribuicoesBlocos(SpedContriConfiguration spedContriConfiguration)
         {
-            con = Connection.NewInstanceSqlServer(db);
+            this._spedContriConfiguration = spedContriConfiguration;
         }
 
         public List<String> GerarBloco0()
         {
-
-            List<String> bloco0000 = Bloco0.Bloco0Ini(this.con, "");
-            List<String> bloco0001 = Bloco0.Bloco0001(this.con, "");
+            List<String> final = new();
+            bloco0000 = Bloco0.Bloco0Ini(_spedContriConfiguration);
+            bloco0001 = Bloco0.Bloco0001(bloco0110);
+            bloco0110 = Bloco0.Bloco0110(_spedContriConfiguration);
             
-            return null;
+            final.AddRange(bloco0000);
+            final.AddRange(bloco0001);
+            final.AddRange(bloco0110);
+            
+            
+            return final;
         }
 
         public List<String> GerarBlocoA()
