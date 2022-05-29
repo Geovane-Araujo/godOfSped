@@ -12,10 +12,4 @@
       <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Controller\SpedContribuicoes\Model\BlocoC" />
-      <Folder Include="Controller\SpedContribuicoes\Model\BlocoD" />
-      <Folder Include="Controller\SpedContribuicoes\Model\BlocoF" />
-    </ItemGroup>
-
 </Project>
