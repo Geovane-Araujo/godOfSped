@@ -15,7 +15,7 @@ public class Program
 
       SqlConnection con = Connection.NewInstanceSqlServer("atmusinf_Control-2220");
 
-      List<Hashtable> h = (List<Hashtable>)Persistense.GetAll(con, "SELECT * FROM nfe");
+      List<Hashtable> h = (List<Hashtable>)Persistense.FindByAll(con, "SELECT * FROM nfe");
 
 
       List<String> retv = new List<string>();

@@ -1,16 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GodOfSped.Model.SpedContribuicoes.Controller;
 
 namespace GodOfSped.Model.SpedContribuicoes
 {
     public class SpedContribuicoesBlocos
     {
+        private SqlConnection con = new();
+
+        public SpedContribuicoesBlocos(String db)
+        {
+            con = Connection.NewInstanceSqlServer(db);
+        }
 
         public List<String> GerarBloco0()
         {
+
+            List<String> bloco0000 = Bloco0.Bloco0Ini(this.con, "");
+            List<String> bloco0001 = Bloco0.Bloco0001(this.con, "");
+            
             return null;
         }
 

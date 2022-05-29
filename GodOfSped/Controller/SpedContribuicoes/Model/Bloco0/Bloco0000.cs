@@ -6,13 +6,13 @@ public class Bloco0000
 {
     public String REG { get; set; } = "0000";
     
-    public String COD_VER { get; set; } = "";
+    public String COD_VER { get; set; } = "006";
     
-    public String TIPO_ESCRIT { get; set; } = "";
+    public String TIPO_ESCRIT { get; set; } = "0";
     
     public String IND_SIT_ESP { get; set; } = "";
     
-    public String NUM_REC_ANTERIOR { get; set; } = "";
+    public String NUM_REC_ANTERIOR { get; set; } = "";// Número do Recibo da Escrituração Anterior, a ser retificada. Utilizado quando TIPO_ESCRIT for igual a 1
     
     public String DT_INI { get; set; } = "";
     

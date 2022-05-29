@@ -1,11 +1,39 @@
 ﻿using System.Collections;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace GodOfSped.Model.SpedContribuicoes;
 
 public class Persistense
 {
-    public static Object GetAll(SqlConnection con, String sql)
+    
+    public static T FindByOne<T>(SqlConnection con, String sql)
+    {
+        Object ret = new();
+
+        ret = ConstructorCommand(con, sql, 1);
+        var json = JsonConvert.SerializeObject(ret);
+        T obj = JsonConvert.DeserializeObject<T>(json);
+        return obj;
+    }
+    
+    public static Collection<T> FindByAll<T>(SqlConnection con, String sql)
+    {
+
+        Object ret = new();
+        ret = ConstructorCommand(con, sql, 2);
+        var json = JsonConvert.SerializeObject(ret);
+        Collection<T> obj = JsonConvert.DeserializeObject<Collection<T>>(json);
+
+        return obj;
+    }
+    public static Object FindByOne(SqlConnection con, String sql)
+    {
+        Object obj = ConstructorCommand(con, sql,1);
+        return obj;
+    }
+    public static Object FindByAll(SqlConnection con, String sql)
     {
         Object obj = ConstructorCommand(con, sql,2);
         return obj;
