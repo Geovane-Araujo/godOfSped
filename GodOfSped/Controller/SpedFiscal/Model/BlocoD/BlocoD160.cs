@@ -20,7 +20,7 @@ public class BlocoD160
 
     public String ToString()
     {
-        String ret = $"|{REG}|{DESPACHO}|{CNPJ_CPF_REM}||{IE_REM}|{COD_MUN_ORI}|{CNPJ_CPF_DEST}||{IE_DEST}|{COD_MUN_DEST}";
+        String ret = $"|{REG}|{DESPACHO}|{CNPJ_CPF_REM}|{IE_REM}|{COD_MUN_ORI}|{CNPJ_CPF_DEST}|{IE_DEST}|{COD_MUN_DEST}|";
      
         return ret;
     }

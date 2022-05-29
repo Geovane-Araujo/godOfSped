@@ -26,7 +26,7 @@ public class BlocoD150
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_MUN_ORIG}|{COD_MUN_DEST}|{VL_SERV}|{VIAGEM}||{IND_TFA}|{COD_MUVL_PESO_TXN_ORIG}|{VL_TX_TERR}|{VL_TX_RED}|{VL_OUT}|{VL_TX_ADV}|";
+        String ret = $"|{REG}|{COD_MUN_ORIG}|{COD_MUN_DEST}|{VL_SERV}|{VIAGEM}|{IND_TFA}|{COD_MUVL_PESO_TXN_ORIG}|{VL_TX_TERR}|{VL_TX_RED}|{VL_OUT}|{VL_TX_ADV}|";
         
         return ret;
     }

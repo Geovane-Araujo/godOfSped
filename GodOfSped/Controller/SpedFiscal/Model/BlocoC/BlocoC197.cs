@@ -20,7 +20,7 @@ public class BlocoC197
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_AJ}|{DESCR_COMPL_AJ}|{COD_ITEM}|{VL_BC_ICMS}|{ALIQ_ICMS}||{VL_ICMS}|{VL_OUTROS}";
+        String ret = $"|{REG}|{COD_AJ}|{DESCR_COMPL_AJ}|{COD_ITEM}|{VL_BC_ICMS}|{ALIQ_ICMS}||{VL_ICMS}|{VL_OUTROS}|";
         
         return ret;
     }

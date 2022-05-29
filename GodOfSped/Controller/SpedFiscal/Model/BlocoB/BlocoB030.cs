@@ -29,7 +29,7 @@ public class BlocoB030
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_MOD}|{SER}|{NUM_DOC_INI}|{NUM_DOC_FIN}|{DT_DOC}|{QTD_CANC}|{VL_CONT}|{VL_ISNT_ISS}|{VL_BC_ISS}|{	VL_ISS}|{COD_INF_OBS}";
+        String ret = $"|{REG}|{COD_MOD}|{SER}|{NUM_DOC_INI}|{NUM_DOC_FIN}|{DT_DOC}|{QTD_CANC}|{VL_CONT}|{VL_ISNT_ISS}|{VL_BC_ISS}|{	VL_ISS}|{COD_INF_OBS}|";
         
         return ret;
     }

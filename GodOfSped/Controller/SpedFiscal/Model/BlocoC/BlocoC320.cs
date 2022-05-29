@@ -22,7 +22,7 @@ public class BlocoC320
 
     public String ToString()
     {
-        String ret = $"|{REG}|{CST_ICMS}|{CFOP}|{ALIQ_ICMS}|{VL_OPR}|{VL_BC_ICMS}||{VL_ICMS}|{VL_RED_BC}|{COD_OBS}|";
+        String ret = $"|{REG}|{CST_ICMS}|{CFOP}|{ALIQ_ICMS}|{VL_OPR}|{VL_BC_ICMS}|{VL_ICMS}|{VL_RED_BC}|{COD_OBS}|";
         
         return ret;
     }

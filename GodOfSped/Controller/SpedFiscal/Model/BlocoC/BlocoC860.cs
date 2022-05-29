@@ -1,8 +1,8 @@
 ﻿namespace GodOfSped.Controller.SpedFiscal.Model.Bloco0;
 
-public class BlocoC850
+public class BlocoC860
 {
-    public String REG { get; set; } = "C850";
+    public String REG { get; set; } = "C860";
     
     public String COD_MOD { get; set; }
     

@@ -19,7 +19,7 @@ public class BlocoD355
 
     public String ToString()
     {
-        String ret = $"|{REG}|{DT_DOC}|{CRO}||{CRZ}|{NUM_COO_FIN}|{GT_FIN}||{VL_BRT}|";
+        String ret = $"|{REG}|{DT_DOC}|{CRO}|{CRZ}|{NUM_COO_FIN}|{GT_FIN}|{VL_BRT}|";
      
         return ret;
     }

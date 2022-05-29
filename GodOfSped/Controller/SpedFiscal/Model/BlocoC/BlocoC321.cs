@@ -24,7 +24,7 @@ public class BlocoC321
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_ITEM}|{QTD}|{UNID}|{VL_ITEM}|{VL_DESC}||{VL_BC_ICMS}|{VL_ICMS}|{VL_PIS}|{VL_COFINS}|";
+        String ret = $"|{REG}|{COD_ITEM}|{QTD}|{UNID}|{VL_ITEM}|{VL_DESC}|{VL_BC_ICMS}|{VL_ICMS}|{VL_PIS}|{VL_COFINS}|";
         
         return ret;
     }

@@ -18,7 +18,7 @@ public class BlocoC140
 
     public String ToString()
     {
-        String ret = $"|{REG}|{IND_EMIT}|{IND_TIT}||{DESC_TIT}|{NUM_TIT}|{QTD_PARC}|{VL_TIT}|";
+        String ret = $"|{REG}|{IND_EMIT}|{IND_TIT}|{DESC_TIT}|{NUM_TIT}|{QTD_PARC}|{VL_TIT}|";
         
         return ret;
     }

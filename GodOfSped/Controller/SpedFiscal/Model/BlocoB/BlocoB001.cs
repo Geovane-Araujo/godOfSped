@@ -8,7 +8,7 @@ public class BlocoB001
 
     public String ToString()
     {
-        String ret = $"|{REG}|{IND_DAD}";
+        String ret = $"|{REG}|{IND_DAD}|";
         
         return ret;
     }

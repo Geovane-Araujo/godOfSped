@@ -3,6 +3,7 @@
 public class BlocoC170
 {
     public String REG { get; set; } = "C170"; 
+    
     public String NUM_ITEM { get; set; }
 
     public String COD_ITEM { get; set; }

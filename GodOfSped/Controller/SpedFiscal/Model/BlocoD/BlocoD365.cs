@@ -8,7 +8,7 @@ public class BlocoD365
     
     public String VLR_ACUM_TOT { get; set; }
     
-    public String NR_TOT  { get; set; }
+    public String NR_TOT { get; set; }
     
     public String DESCR_NR_TOT { get; set; }
 

@@ -2,7 +2,7 @@
 
 public class BlocoB460
 {
-    public String REG { get; set; } = "B4600";
+    public String REG { get; set; } = "B460";
     
     public String IND_DED { get; set; }
     
@@ -20,7 +20,7 @@ public class BlocoB460
 
     public String ToString()
     {
-        String ret = $"|{REG}|{IND_DED}|{VL_DED}|{NUM_PROC}|{IND_PROC}|{PROC}|{COD_INF_OBS}|{IND_OBR}";
+        String ret = $"|{REG}|{IND_DED}|{VL_DED}|{NUM_PROC}|{IND_PROC}|{PROC}|{COD_INF_OBS}|{IND_OBR}|";
         
         return ret;
     }

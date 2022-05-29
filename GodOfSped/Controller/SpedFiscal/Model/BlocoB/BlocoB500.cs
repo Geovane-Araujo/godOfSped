@@ -13,7 +13,7 @@ public class BlocoB500
     
     public String ToString()
     {
-        String ret = $"|{REG}|{VL_REC}|{QTD_PROF}|{VL_OR}";
+        String ret = $"|{REG}|{VL_REC}|{QTD_PROF}|{VL_OR}|";
         
         return ret;
     }

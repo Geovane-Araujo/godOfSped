@@ -20,7 +20,7 @@ public class BlocoC130
 
     public String ToString()
     {
-        String ret = $"|{REG}|{VL_SERV_NT}|{VL_BS_ISSQN}||{VL_ISSQN}|{VL_BS_IRRF}|{VL_IRRF}||{VL_BS_PREV}|{VL_PREV}";
+        String ret = $"|{REG}|{VL_SERV_NT}|{VL_BS_ISSQN}||{VL_ISSQN}|{VL_BS_IRRF}|{VL_IRRF}||{VL_BS_PREV}|{VL_PREV}|";
         
         return ret;
     }

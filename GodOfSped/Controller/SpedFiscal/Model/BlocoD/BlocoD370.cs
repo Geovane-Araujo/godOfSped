@@ -18,7 +18,7 @@ public class BlocoD370
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_MUN_ORIG}|{VL_SERV}||{QTD_BILH}|{VL_BC_ICMS}|{VL_ICMS}|";
+        String ret = $"|{REG}|{COD_MUN_ORIG}|{VL_SERV}|{QTD_BILH}|{VL_BC_ICMS}|{VL_ICMS}|";
      
         return ret;
     }

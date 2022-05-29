@@ -54,7 +54,7 @@ public class BlocoD100
 
     public String ToString()
     {
-        String ret = $"|{REG}|{IND_OPER}|{IND_EMIT}|{COD_PART}|{COD_MOD}||{COD_SIT}|{SER}|{SUB}|{NUM_DOC}|{CHV_CTE}|{DT_DOC}||{DT_A_P}|{TP_CT_e}|{CHV_CTE_REF}||{VL_DOC}|{VL_DESC}|{IND_FRT}|{VL_SERV}|{VL_BC_ICMS}|{VL_ICMS}|{VL_NT}|{NUM_DOC}|{COD_INF}|{COD_CTA}||{COD_MUN_ORIG}|{COD_MUN_DEST}|";
+        String ret = $"|{REG}|{IND_OPER}|{IND_EMIT}|{COD_PART}|{COD_MOD}|{COD_SIT}|{SER}|{SUB}|{NUM_DOC}|{CHV_CTE}|{DT_DOC}|{DT_A_P}|{TP_CT_e}|{CHV_CTE_REF}|{VL_DOC}|{VL_DESC}|{IND_FRT}|{VL_SERV}|{VL_BC_ICMS}|{VL_ICMS}|{VL_NT}|{NUM_DOC}|{COD_INF}|{COD_CTA}|{COD_MUN_ORIG}|{COD_MUN_DEST}|";
         
         return ret;
     }
