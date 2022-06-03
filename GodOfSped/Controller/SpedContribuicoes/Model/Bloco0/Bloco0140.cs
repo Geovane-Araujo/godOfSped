@@ -3,7 +3,7 @@ namespace GodOfSped.Model.SpedContribuicoes.Model;
 
 public class Bloco0140
 {
-    public String REG { get; } = "0120";
+    public String REG { get; } = "0140";
     
     public String COD_EST { get; set; }
     

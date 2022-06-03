@@ -1,9 +1,9 @@
 ﻿
 namespace GodOfSped.Model.SpedContribuicoes.Model;
 
-public class Bloco9901
+public class Bloco9900
 {
-    public String REG { get; } = "9901";
+    public String REG { get; } = "9900";
     
     public String REG_BLC { get; set; }
     

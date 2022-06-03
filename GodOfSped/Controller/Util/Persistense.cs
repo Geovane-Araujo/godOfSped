@@ -18,13 +18,13 @@ public class Persistense
         return obj;
     }
     
-    public static Collection<T> FindByAll<T>(SqlConnection con, String sql)
+    public static List<T> FindByAll<T>(SqlConnection con, String sql)
     {
 
         Object ret = new();
         ret = ConstructorCommand(con, sql, 2);
         var json = JsonConvert.SerializeObject(ret);
-        Collection<T> obj = JsonConvert.DeserializeObject<Collection<T>>(json);
+        List<T> obj = JsonConvert.DeserializeObject<List<T>>(json);
 
         return obj;
     }

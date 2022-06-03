@@ -18,13 +18,13 @@ public class Program
       SpedContriConfiguration spedContriConfiguration = new();
       spedContriConfiguration.idpessoa = 0;
       spedContriConfiguration.cnn = con;
-      spedContriConfiguration.datafim = DateTime.Now;
-      spedContriConfiguration.dataini = DateTime.Now;
+      spedContriConfiguration.datafim = new DateTime(2022,05,31);
+      spedContriConfiguration.dataini = new DateTime(2022,05,01);
       
       
 
       SpedContribuicoesBlocos spedContribuicoesBlocos = new(spedContriConfiguration);
-      List<String> list = spedContribuicoesBlocos.GerarBloco0();
+      List<String> list = spedContribuicoesBlocos.GerarSped();
 
       ExportFile.GenerateFile(list);
    }
