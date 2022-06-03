@@ -19,6 +19,7 @@ public class Bloco0
         if (h.CNPJ == "" && h.NOME == "")
             return retv;
         
+        config.cnpjEmpresa = h.CNPJ;
         retv.Add(h.ToString());
         return retv;
     }

@@ -3,6 +3,7 @@ namespace GodOfSped.Model.SpedContribuicoes.Model;
 
 public class BlocoC170
 {
+    public Int32 IDNOTA;
     public String REG { get; } = "C170";
     
     public String NUM_ITEM { get; set; } = "";

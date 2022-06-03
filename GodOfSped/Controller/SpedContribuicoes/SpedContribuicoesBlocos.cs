@@ -23,6 +23,8 @@ namespace GodOfSped.Model.SpedContribuicoes
         
         // bloco C
         private List<String> blocoC001 = new List<string>();
+        private List<String> blocoC010 = new List<string>();
+        private List<String> blocoC100 = new List<string>();
         private List<String> blocoC990 = new List<string>();
         
         // bloco D
@@ -76,9 +78,9 @@ namespace GodOfSped.Model.SpedContribuicoes
         {
             
             bloco0000 = Bloco0.Bloco0Ini(_spedContriConfiguration);
-            bloco0001 = Bloco0.Bloco0001(bloco0110);
             bloco0100 = Bloco0.Bloco0100(_spedContriConfiguration);
             bloco0110 = Bloco0.Bloco0110(_spedContriConfiguration);
+            bloco0001 = Bloco0.Bloco0001(bloco0110);
             bloco0140 = Bloco0.Bloco0140(_spedContriConfiguration);
             bloco0150 = Bloco0.Bloco0150(_spedContriConfiguration);
             bloco0190 = Bloco0.Bloco0190(_spedContriConfiguration);
@@ -131,14 +133,24 @@ namespace GodOfSped.Model.SpedContribuicoes
 
         public List<String> GerarBlocoC()
         {
+            List<String> bloC100 = new();
+            List<String> bloC170 = new();
             
             blocoC001 = BlocoC.BlocoIni(1);
-            blocoC990= BlocoC.BlocoFim(blocoC001);
+            blocoC010 = BlocoC.Bloco010(_spedContriConfiguration);
+            blocoC100 = BlocoC.BlocoC100(_spedContriConfiguration,bloC100,bloC170);
             
             arrBlocoC.AddRange(blocoC001);
+            arrBlocoC.AddRange(blocoC010);
+            arrBlocoC.AddRange(blocoC100);
+
+            blocoC990= BlocoC.BlocoFim(arrBlocoC);
             arrBlocoC.AddRange(blocoC990);
             
             tableBlocos.Add("C001",blocoC001);
+            tableBlocos.Add("C010",blocoC010);
+            tableBlocos.Add("C100",bloC100);
+            tableBlocos.Add("C170",bloC170);
             tableBlocos.Add("C990",blocoC990);
             
             return arrBlocoC;
