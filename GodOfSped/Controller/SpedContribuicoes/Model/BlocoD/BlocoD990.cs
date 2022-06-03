@@ -3,14 +3,14 @@ namespace GodOfSped.Model.SpedContribuicoes.Model;
 
 public class BlocoD990
 {
-    public String REG { get; } = "F001";
+    public String REG { get; } = "D990";
     
-    public String QTD_LIN_F { get; set; }
+    public String QTD_LIN_D { get; set; }
     
     
     public String ToString()
     {
-        String ret = $"|{REG}|{QTD_LIN_F}|";
+        String ret = $"|{REG}|{QTD_LIN_D}|";
         
         return ret;
     }

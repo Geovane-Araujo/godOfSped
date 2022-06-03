@@ -5,14 +5,12 @@ public class Bloco1990
 {
     public String REG { get; } = "1990";
     
-    public String NUM_PROC { get; set; } = "";
-    
-    public String IND_PROC { get; set; } = "";
+    public String QTD_LIN_1 { get; set; } = "";
     
     
     public String ToString()
     {
-        String ret = $"|{REG}|{NUM_PROC}|{IND_PROC}|";
+        String ret = $"|{REG}|{QTD_LIN_1}|";
         
         return ret;
     }
