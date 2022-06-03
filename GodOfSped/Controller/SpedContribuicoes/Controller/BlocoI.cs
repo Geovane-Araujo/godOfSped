@@ -2,12 +2,12 @@
 
 namespace GodOfSped.Model.SpedContribuicoes.Controller;
 
-public class BlocoA
+public class BlocoI
 {
     public static List<String> BlocoIni(int contemRegistro)
     {
         List<String> retv = new List<string>();
-        BlocoA001 blo = new();
+        BlocoI001 blo = new();
 
         blo.IND_MOV = (contemRegistro).ToString();
         
@@ -15,12 +15,12 @@ public class BlocoA
         return retv;
     }
     
-    public static List<String> BlocoFim(List<String> bloA)
+    public static List<String> BlocoFim(List<String> bloI)
     {
         List<String> retv = new List<string>();
-        BlocoA990 blo = new();
+        BlocoI990 blo = new();
         
-        blo.QTD_LIN_A = (bloA.Count + 1).ToString();
+        blo.QTD_LIN_I = (bloI.Count + 1).ToString();
         
         retv.Add(blo.ToString());
         return retv;
