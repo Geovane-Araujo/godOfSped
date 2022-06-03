@@ -35,7 +35,7 @@ public class Bloco0000
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_VER}|{TIPO_ESCRIT}|{IND_SIT_ESP}|{NUM_REC_ANTERIOR}|{DT_INI}|{DT_FIN}|{NOME}|{CNPJ}|{UF}|{COD_MUN}|{SUFRAMA}|{IND_NAT_PJ}|{IND_ATIV}|";
+        String ret = $"|{REG}|{COD_VER}|{TIPO_ESCRIT}|{IND_SIT_ESP}|{NUM_REC_ANTERIOR}|{DT_INI}|{DT_FIN}|{Persistense.replaceCharacters(NOME)}|{CNPJ}|{UF}|{COD_MUN}|{SUFRAMA}|{IND_NAT_PJ}|{IND_ATIV}|";
         return ret;
     }
 }

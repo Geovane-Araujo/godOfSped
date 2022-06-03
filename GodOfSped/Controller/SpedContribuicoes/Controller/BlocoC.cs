@@ -5,12 +5,14 @@ namespace GodOfSped.Model.SpedContribuicoes.Controller;
 
 public class BlocoC
 {
-    public static List<String> BlocoIni(int contemRegistro)
+    public static List<String> BlocoIni(List<String> contemRegistro)
     {
         List<String> retv = new List<string>();
         BlocoC001 blo = new();
-
-        blo.IND_MOV = (contemRegistro).ToString();
+        if(contemRegistro.Count > 0)
+            blo.IND_MOV = 0.ToString();
+        else
+            blo.IND_MOV = 1.ToString();
         
         retv.Add(blo.ToString());
         return retv;
@@ -48,13 +50,17 @@ public class BlocoC
         
         bloC100List.ForEach(item =>
         {
-            retv.Add(item.ToString());
-            blC100List.Add(item.ToString());
-            bloC170List.FindAll(obj => obj.IDNOTA == item.IDNOTA).ForEach(index =>
+            if (item.COD_MOD.Equals("55"))
             {
-                retv.Add(index.ToString());
-                blC170List.Add(index.ToString());
-            });
+                retv.Add(item.ToString());
+                blC100List.Add(item.ToString());
+                bloC170List.FindAll(obj => obj.IDNOTA == item.IDNOTA).ForEach(index =>
+                {
+                    retv.Add(index.ToString());
+                    blC170List.Add(index.ToString());
+                });
+            }
+            
         });
         
         return retv;

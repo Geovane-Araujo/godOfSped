@@ -64,11 +64,17 @@ public class BlocoC100
     
     public String ToString()
     {
-        String ret = $"|{REG}|{IND_OPER}|{IND_EMIT}|{COD_PART}|{COD_MOD}|{COD_SIT}|{SER}|" +
+        String ret = $"|{REG}|{IND_OPER}|{IND_EMIT}|{COD_PART}|{COD_MOD}|0{COD_SIT}|{SER}|" +
                      $"{NUM_DOC}|{CHV_NFE}|{DT_DOC}|{DT_E_S}|" +
-                     $"{VL_DOC}|{IND_PGTO}|{VL_DESC}|{VL_ABAT_NT}|{VL_MERC}|{IND_FRT}|{VL_FRT}|{VL_SEG}|{VL_OUT_DA}|" +
-                     $"{VL_BC_ICMS}|{VL_ICMS}|{VL_BC_ICMS_ST}|{VL_ICMS_ST}|{VL_IPI}|{VL_PIS}|{VL_COFINS}|" +
-                     $"{VL_PIS_ST}|{VL_COFINS_ST}|";
+                     $"{VL_DOC.Replace(".",",")}|{IND_PGTO}|{VL_DESC.Replace(".",",")}|" +
+                     $"{VL_ABAT_NT}|{VL_MERC.Replace(".",",")}|" +
+                     $"{IND_FRT}|{VL_FRT.Replace(".",",")}|" +
+                     $"{VL_SEG.Replace(".",",")}|" +
+                     $"{VL_OUT_DA.Replace(".",",")}|" +
+                     $"{VL_BC_ICMS.Replace(".",",")}|{VL_ICMS.Replace(".",",")}|" +
+                     $"{VL_BC_ICMS_ST.Replace(".",",")}|{VL_ICMS_ST.Replace(".",",")}|" +
+                     $"{VL_IPI.Replace(".",",")}|{VL_PIS.Replace(".",",")}|{VL_COFINS.Replace(".",",")}|" +
+                     $"{VL_PIS_ST.Replace(".",",")}|{VL_COFINS_ST.Replace(".",",")}|";
         return ret;
     }
 }

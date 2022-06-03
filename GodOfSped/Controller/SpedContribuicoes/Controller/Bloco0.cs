@@ -43,6 +43,9 @@ public class Bloco0
         Bloco0100 blo = Persistense.FindByOne<Bloco0100>(config.cnn, Sql.sqlBloco0100.Replace("{@@IDEmpresa}",config.idpessoa.ToString()));
         
         List<String> retv = new List<string>();
+
+        if (blo.CRC.Equals(""))
+            blo.CRC = "1234";
         
         retv.Add(blo.ToString());
         return retv;
@@ -50,8 +53,9 @@ public class Bloco0
     
     public static List<String> Bloco0110(SpedContriConfiguration config)
     {
-        Bloco0110 blo = Persistense.FindByOne<Bloco0110>(config.cnn, Sql.sqlBloco0110.Replace("{@@IDEmpresa}",config.idpessoa.ToString()));
-
+        // Bloco0110 blo = Persistense.FindByOne<Bloco0110>(config.cnn, Sql.sqlBloco0110.Replace("{@@IDEmpresa}",config.idpessoa.ToString()));
+        Bloco0110 blo = config.Bloco0110;
+        
         List<String> retv = new List<string>();
         
         retv.Add(blo.ToString());
@@ -82,7 +86,10 @@ public class Bloco0
         
         blo.ForEach(item =>
         {
-            retv.Add(item.ToString());
+            if (!item.CNPJ.Equals("") && !item.CPF.Equals(""))
+                item.CPF = "";
+            if(!item.COD_PAIS.Equals(""))
+                retv.Add(item.ToString());
         });
         
         return retv;

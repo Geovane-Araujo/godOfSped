@@ -70,38 +70,59 @@ public class Sql
                                         "where pj.idpessoa = {@@IDEmpresa} and ender.Tipo = 0";
     
     public static String sqlBloco0150 =  "select distinct\n" +
-                                         "\tIDPessoaDestinatario_Gestao as COD_PART, \n" +
-                                         "\tE04_xNome as NOME, \n" +
-                                         "\t[E14_cPais] as COD_PAIS,\n" +
-                                         "\tE02_CNPJ as CNPJ,\n" +
-                                         "\tE03_CPF as CPF,\n" +
-                                         "\tE17_IE as IE,\n" +
-                                         "\tE10_cMun as COD_MUN,\n" +
-                                         "\tE06_xLgr as \"END\",\n" +
-                                         "\tE07_nro as NUM,\n" +
-                                         "\tE18_ISUF as SUFRAMA,\n" +
-                                         "\tE08_xCpl as COMPL,\n" +
-                                         "\tE09_xBairro as BAIRRO\n" +
-                                         "from NFe_identificacao_destinatario\n" +
-                                         "\tinner join nfe on nfe.ID = NFe_identificacao_destinatario.IDNota\n" +
-                                         "where nfe.B09_dhEmi between '{@@dataini}' and '{@@datafim}' and IDMultiEmpresa = {@@IDEmpresa} and nfe.Emitida = 1\n" +
-                                         "union\n" +
-                                         "select distinct\n" +
-                                         "\tIDPessoaEmitente_Gestao as COD_PART, \n" +
-                                         "\t[C03_xNome] as NOME, \n" +
-                                         "\t[C14_cPais] as COD_PAIS,\n" +
-                                         "\t[C02_CNPJ] as CNPJ,\n" +
-                                         "\t[C02a_CPF] as CPF,\n" +
-                                         "\t[C17_IE] as IE,\n" +
-                                         "\t[C10_cMun] as COD_MUN,\n" +
-                                         "\t[C06_xLgr] as \"END\",\n" +
-                                         "\t[C07_nro] as NUM,\n" +
-                                         "\t'' as SUFRAMA,\n" +
-                                         "\t[C08_xCpl] as COMPL,\n" +
-                                         "\t[C09_xBairro] as BAIRRO\n" +
-                                         "from NFe_identificacao_emitente\n" +
-                                         "\tinner join nfe on nfe.ID = NFe_identificacao_emitente.IDNota\n" +
-                                         "where nfe.B09_dhEmi between '{@@dataini}' and '{@@datafim}' and IDMultiEmpresa = {@@IDEmpresa} and nfe.Emitida = 1\n";
+                                        "\tpessoas.ID as COD_PART, \n" +
+                                        "\tpessoas.Nome as NOME, \n" +
+                                        "\tcase when pessoas_juridicas.CNPJ = '' and pessoas_fisicas.CPF = '' \n" +
+                                        "\t\tthen ''\n" +
+                                        "\t\telse\n" +
+                                        "\t\t\tcase NFe_identificacao_destinatario.E14_cPais when 0 then '1058' else CAST(NFe_identificacao_destinatario.E14_cPais as varchar) end\n" +
+                                        "\t\tend as COD_PAIS,\n" +
+                                        "\tpessoas_juridicas.CNPJ as CNPJ,\n" +
+                                        "\tpessoas_fisicas.CPF as CPF,\n" +
+                                        "\tpessoas_juridicas.InscricaoEstadual as IE,\n" +
+                                        "\tE18_ISUF as SUFRAMA,\n" +
+                                        "\tpessoas_enderecos.Endereco as \"END\",\n" +
+                                        "\tpessoas_enderecos.Numero as NUM,\n" +
+                                        "\tpessoas_enderecos.Complemento as COMPL,\n" +
+                                        "\tpessoas_enderecos.BAIRRO as BAIRRO,\n" +
+                                        "\tcidades.CodigoIBGE as COD_MUN\n" +
+                                        "from NFe_identificacao_destinatario\n" +
+                                        "\tinner join nfe on nfe.ID = NFe_identificacao_destinatario.IDNota\n" +
+                                        "\tinner join pessoas on NFe_identificacao_destinatario.IDPessoaDestinatario_Gestao = pessoas.ID\n" +
+                                        "\tleft join pessoas_fisicas on pessoas.ID = pessoas_fisicas.IDPessoa\n" +
+                                        "\tleft join pessoas_juridicas on pessoas.ID = pessoas_juridicas.IDPessoa\n" +
+                                        "\tinner join pessoas_enderecos on pessoas_enderecos.IDPessoa = pessoas.ID\n" +
+                                        "\tinner join cidades on  pessoas_enderecos.IDCidade = cidades.ID\n" +
+                                        "\tinner join estados on cidades.IDEstado = estados.ID\n" +
+                                        "where nfe.B09_dhEmi between '2022-05-01' and '2022-05-31' and nfe.IDMultiEmpresa = 0 and pessoas_enderecos.Tipo = 0\n" +
+                                        "union\n" +
+                                        "select distinct\n" +
+                                        "\tpessoas.ID as COD_PART, \n" +
+                                        "\tpessoas.Nome as NOME, \n" +
+                                        "\t\tcase when pessoas_juridicas.CNPJ = '' and pessoas_fisicas.CPF = '' \n" +
+                                        "\t\tthen ''\n" +
+                                        "\t\telse\n" +
+                                        "\t\t\tcase NFe_identificacao_emitente.C14_cPais when 0 then '1058' else CAST(NFe_identificacao_emitente.C14_cPais as varchar) end\n" +
+                                        "\t\tend as COD_PAIS,\n" +
+                                        "\tpessoas_juridicas.CNPJ as CNPJ,\n" +
+                                        "\tpessoas_fisicas.CPF as CPF,\n" +
+                                        "\tpessoas_juridicas.InscricaoEstadual as IE,\n" +
+                                        "\t'' as SUFRAMA,\n" +
+                                        "\tpessoas_enderecos.Endereco as \"END\",\n" +
+                                        "\tpessoas_enderecos.Numero as NUM,\n" +
+                                        "\tpessoas_enderecos.Complemento as COMPL,\n" +
+                                        "\tpessoas_enderecos.BAIRRO as BAIRRO,\n" +
+                                        "\tcidades.CodigoIBGE as COD_MUN\n" +
+                                        "from NFe_identificacao_emitente\n" +
+                                        "\tinner join nfe on nfe.ID = NFe_identificacao_emitente.IDNota\n" +
+                                        "\tinner join pessoas on NFe_identificacao_emitente.IDPessoaEmitente_Gestao = pessoas.ID\n" +
+                                        "\tleft join pessoas_fisicas on pessoas.ID = pessoas_fisicas.IDPessoa\n" +
+                                        "\tleft join pessoas_juridicas on pessoas.ID = pessoas_juridicas.IDPessoa\n" +
+                                        "\tinner join pessoas_enderecos on pessoas_enderecos.IDPessoa = pessoas.ID\n" +
+                                        "\tinner join cidades on  pessoas_enderecos.IDCidade = cidades.ID\n" +
+                                        "\tinner join estados on cidades.IDEstado = estados.ID\n" +
+                                        "where nfe.B09_dhEmi between '{@@dataini}' and '{@@datafim}' and nfe.IDMultiEmpresa = {@@IDEmpresa} and pessoas_enderecos.Tipo = 0\n" +
+                                        "order by COD_PART asc";
     
     public static String sqlBloco0190 = "select  distinct\n" +
                                         "\tI09_uCom\tas UNID,\n" +
@@ -112,8 +133,8 @@ public class Sql
     
     public static String sqlBloco0200 = "select  distinct\n" +
                                          "\tIDProdutoGrade as COD_ITEM,\n" +
-                                         "\tI04_xProd as DESCR_ITEM,\n" +
-                                         "\tI03_cEAN as COD_BARRA,\n" +
+                                         "\tprodutos.Descricao as DESCR_ITEM,\n" +
+                                         "\tprodutos_grades_estoque.CodigoBarras as COD_BARRA,\n" +
                                          "\tI09_uCom\tas UNID_INV,\n" +
                                          "\t'0'+ CAST(produtos.TipoItemFiscal as varchar) as TIPO_ITEM,\n" +
                                          "\tI05_NCM as COD_NCM\n" +
@@ -178,7 +199,7 @@ public class Sql
     
     public static String sqlBlocoC170 = "select \n" +
                                         "\tnfe.ID as IDNOTA,\n" +
-                                        "\tNFe_produtos_servicos.H02_nItem as NUM_ITEM,\n" +
+                                        "\t(NFe_produtos_servicos.H02_nItem + 1) as NUM_ITEM,\n" +
                                         "\tNFe_produtos_servicos.IDProdutoGrade as COD_ITEM,\n" +
                                         "\tNFe_produtos_servicos.I04_xProd as DESCR_COMPL,\n" +
                                         "\tNFe_produtos_servicos.I10_qCom as QTD,\n" +
@@ -203,13 +224,13 @@ public class Sql
                                         "\tNFe_produtos_servicos_pis.Q06_CST as CST_PIS,\n" +
                                         "\tNFe_produtos_servicos_pis.Q07_vBC as VL_BC_PIS,\n" +
                                         "\tNFe_produtos_servicos_pis.Q08_pPIS as ALIQ_PIS,\n" +
-                                        "\tNFe_produtos_servicos_pis.Q10_qBCProd as QUANT_BC_PIS,\n" +
+                                        "\tcast(NFe_produtos_servicos_pis.Q10_qBCProd as decimal(18,2)) as QUANT_BC_PIS,\n" +
                                         "\tNFe_produtos_servicos_pis.Q11_vAliqProd as ALIQ_PIS_QUANT,\n" +
                                         "\tNFe_produtos_servicos_pis.Q09_vPIS as VL_PIS,\n" +
                                         "\tNFe_produtos_servicos_cofins.S06_CST as CST_COFINS,\n" +
                                         "\tNFe_produtos_servicos_cofins.S07_vBC as VL_BC_COFINS,\n" +
                                         "\tNFe_produtos_servicos_cofins.S08_pCOFINS as ALIQ_COFINS,\n" +
-                                        "\tNFe_produtos_servicos_cofins.S09_qBCProd as QUANT_BC_COFINS,\n" +
+                                        "\tcast(NFe_produtos_servicos_cofins.S09_qBCProd as decimal(18,2)) as QUANT_BC_COFINS,\n" +
                                         "\tNFe_produtos_servicos_cofins.S10_vAliqProd as ALIQ_COFINS_QUANT,\n" +
                                         "\tNFe_produtos_servicos_cofins.S11_vCOFINS as VL_COFINS,\n" +
                                         "\tnfe.IDPC_Gestao as COD_CTA\n" +

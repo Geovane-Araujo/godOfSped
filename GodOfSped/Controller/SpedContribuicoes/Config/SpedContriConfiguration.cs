@@ -23,7 +23,7 @@ public class SpedContriConfiguration
     public String cnpjEmpresa { get; set; }
 
 
-    public String IND_ESCRI { get; set; } = "02"; 	// Indicador da apuração das contribuições e créditos, na escrituração das operações por NF-e e ECF, no período:
+    public String IND_ESCRI { get; set; } = "2"; 	// Indicador da apuração das contribuições e créditos, na escrituração das operações por NF-e e ECF, no período:
 
     public SqlConnection cnn { get; set; }
 

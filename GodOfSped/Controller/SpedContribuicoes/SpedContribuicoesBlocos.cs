@@ -136,8 +136,8 @@ namespace GodOfSped.Model.SpedContribuicoes
             List<String> bloC100 = new();
             List<String> bloC170 = new();
             
-            blocoC001 = BlocoC.BlocoIni(1);
             blocoC010 = BlocoC.Bloco010(_spedContriConfiguration);
+            blocoC001 = BlocoC.BlocoIni(blocoC010);
             blocoC100 = BlocoC.BlocoC100(_spedContriConfiguration,bloC100,bloC170);
             
             arrBlocoC.AddRange(blocoC001);
@@ -265,8 +265,8 @@ namespace GodOfSped.Model.SpedContribuicoes
             contrib.AddRange(GerarBlocoD());
             contrib.AddRange(GerarBlocoF());
             contrib.AddRange(GerarBlocoI());
-            contrib.AddRange(GerarBlocoP());
             contrib.AddRange(GerarBlocoM());
+            contrib.AddRange(GerarBlocoP());
             contrib.AddRange(GerarBloco1());
             contrib.AddRange(GerarBloco9());
             

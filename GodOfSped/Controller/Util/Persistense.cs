@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.ObjectModel;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace GodOfSped.Model.SpedContribuicoes;
@@ -77,5 +78,10 @@ public class Persistense
             return tbl;
         }
         return false;
+    }
+
+    public static String replaceCharacters(String s)
+    {
+        return Regex.Replace(s, "[^0-9a-zA-Z-' ']+", "");
     }
 }

@@ -81,13 +81,31 @@ public class BlocoC170
     
     public String ToString()
     {
-        String ret = $"|{REG}|{NUM_ITEM}|{COD_ITEM}|{DESCR_COMPL}|{QTD}|{UNID}|{VL_ITEM}|" +
-                     $"{VL_DESC}|{IND_MOV}|{CST_ICMS}|{CFOP}|" +
-                     $"{COD_NAT}|{VL_BC_ICMS}|{ALIQ_ICMS}|{VL_ICMS}|{VL_BC_ICMS_ST}|{ALIQ_ST}|{VL_ICMS_ST}|{IND_APUR}|{CTS_IPI}|" +
-                     $"{VL_BC_ICMS}|{VL_ICMS}|{VL_BC_ICMS_ST}|{VL_ICMS_ST}|{VL_IPI}|{VL_PIS}|{VL_COFINS}|" +
-                     $"{COD_ENQ}|{VL_BC_IPI}|{ALIQ_IPI}|{VL_IPI}|{CST_PIS}|{VL_BC_PIS}|{ALQ_PIS}|{QUANT_BC_PIS}|" +
-                     $"{ALIQ_PIS_QUANT}|{VL_PIS}|{CST_COFINS}|{VL_BC_COFINS}|{ALIQ_COFINS}|{QUANT_BC_COFINS}|{ALIQ_COFINS_QUANT}|" +
-                     $"{VL_COFINS}|{COD_CTA}|";
+        String ret = $"|{REG}|{NUM_ITEM}|{COD_ITEM}|{DESCR_COMPL}|{QTD.Replace(".",",")}|{UNID}|" +
+                     $"{VL_ITEM.Replace(".",",")}|" +
+                     $"{VL_DESC.Replace(".",",")}|" +
+                     $"{IND_MOV}|" +
+                     $"{CST_ICMS}|" +
+                     $"{CFOP}|" +
+                     $"{COD_NAT}|" +
+                     $"{VL_BC_ICMS.Replace(".",",")}|" +
+                     $"{ALIQ_ICMS.Replace(".",",")}|" +
+                     $"{VL_ICMS.Replace(".",",")}|" +
+                     $"{VL_BC_ICMS_ST.Replace(".",",")}|" +
+                     $"{ALIQ_ST.Replace(".",",")}|" +
+                     $"{VL_ICMS_ST.Replace(".",",")}|" +
+                     $"{IND_APUR}|" +
+                     $"{CTS_IPI}|" +
+                     $"{COD_ENQ}|" +
+                     $"{VL_BC_IPI.Replace(".",",")}|" +
+                     $"{ALIQ_IPI.Replace(".",",")}|" +
+                     $"{VL_IPI.Replace(".",",")}|" +
+                     $"{CST_PIS}|" +
+                     $"{VL_BC_PIS.Replace(".",",")}|{ALQ_PIS.Replace(".",",")}|{QUANT_BC_PIS.Replace(".",",")}|" +
+                     $"{ALIQ_PIS_QUANT.Replace(".",",")}|{VL_PIS.Replace(".",",")}|" +
+                     $"{CST_COFINS}|{VL_BC_COFINS.Replace(".",",")}|{ALIQ_COFINS.Replace(".",",")}|" +
+                     $"{QUANT_BC_COFINS.Replace(".",",")}|{ALIQ_COFINS_QUANT.Replace(".",",")}|" +
+                     $"{VL_COFINS.Replace(".",",")}|{COD_CTA}|";
         return ret;
     }
 }

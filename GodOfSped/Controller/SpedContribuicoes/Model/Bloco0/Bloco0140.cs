@@ -23,7 +23,7 @@ public class Bloco0140
     
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_EST}|{NOME}|{CNPJ}|{UF}|{IE}|{COD_MUN}|{IM}|{SUFRAMA}|";
+        String ret = $"|{REG}|{COD_EST}|{Persistense.replaceCharacters(NOME)}|{CNPJ}|{UF}|{IE}|{COD_MUN}|{IM}|{SUFRAMA}|";
         
         return ret;
     }
