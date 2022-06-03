@@ -124,7 +124,7 @@ public class Bloco0
     
     public static List<String> Bloco0500(SpedContriConfiguration config)
     {
-        String sql = Sql.sqlBloco0200.Replace("{@@IDEmpresa}", config.idpessoa.ToString());
+        String sql = Sql.sqlBloco0500.Replace("{@@IDEmpresa}", config.idpessoa.ToString());
         sql = sql.Replace("{@@dataini}", config.dataini.ToString("yyyy-MM-dd"));
         sql = sql.Replace("{@@datafim}", config.datafim.ToString("yyyy-MM-dd"));
         
@@ -146,7 +146,7 @@ public class Bloco0
         List<String> retv = new List<string>();
 
         blo.QTD_LIN_0 = (totalBloco0.Count + 1).ToString();
-        retv.Add(retv.ToString());
+        retv.Add(blo.ToString());
         return retv;
     }
 }

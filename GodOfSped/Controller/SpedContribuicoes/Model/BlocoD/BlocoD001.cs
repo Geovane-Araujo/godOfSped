@@ -3,7 +3,7 @@ namespace GodOfSped.Model.SpedContribuicoes.Model;
 
 public class BlocoD001
 {
-    public String REG { get; } = "F001";
+    public String REG { get; } = "D001";
     
     public String IND_MOV { get; set; }
     
