@@ -12,7 +12,4 @@ public class BlocoK990
         
         return ret;
     }
-
-
-    
 }
