@@ -10,7 +10,7 @@ public class BlocoC105
 
     public String ToString()
     {
-        String ret = $"|{REG}|{OPE}|{UF}|";
+        String ret = $"|{REG}|{OPER}|{UF}|";
         
         return ret;
     }

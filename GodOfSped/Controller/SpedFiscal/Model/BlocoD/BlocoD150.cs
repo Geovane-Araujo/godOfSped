@@ -14,7 +14,7 @@ public class BlocoD150
 
     public String IND_TFA { get; set; }
 
-    public String COD_MUVL_PESO_TXN_ORIG { get; set; }
+    public String VL_PESO_TX { get; set; }
     
     public String VL_TX_TERR { get; set; }
     
@@ -26,7 +26,10 @@ public class BlocoD150
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_MUN_ORIG}|{COD_MUN_DEST}|{VL_SERV}|{VIAGEM}|{IND_TFA}|{COD_MUVL_PESO_TXN_ORIG}|{VL_TX_TERR}|{VL_TX_RED}|{VL_OUT}|{VL_TX_ADV}|";
+        String ret = $"|{REG}|{COD_MUN_ORIG}|{COD_MUN_DEST}|" +
+                     $"{VEIC_ID}|{VIAGEM}|{IND_TFA}|{VL_PESO_TX}|" +
+                     $"{VL_TX_TERR}|{VL_TX_RED}|{VL_OUT}|" +
+                     $"{VL_TX_ADV}|";
         
         return ret;
     }

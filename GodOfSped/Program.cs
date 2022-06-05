@@ -16,8 +16,8 @@ public class Program
       SqlConnection con = Connection.NewInstanceSqlServer("atmusinf_Control-2220");
       SpedContriConfiguration spedContriConfiguration = new();
       spedContriConfiguration.Bloco0110 = new();
-      spedContriConfiguration.Bloco0110.COD_INC_TRIB = "2";
-      spedContriConfiguration.Bloco0110.COD_TIPO_CONT = "1";
+      spedContriConfiguration.Bloco0110.COD_INC_TRIB = "1";
+      spedContriConfiguration.Bloco0110.COD_TIPO_CONT = "2";
       spedContriConfiguration.Bloco0110.IND_REG_CUM = "9";
       spedContriConfiguration.idpessoa = 0;
       spedContriConfiguration.cnn = con;

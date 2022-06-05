@@ -94,7 +94,7 @@ public class Sql
                                         "\tinner join pessoas_enderecos on pessoas_enderecos.IDPessoa = pessoas.ID\n" +
                                         "\tinner join cidades on  pessoas_enderecos.IDCidade = cidades.ID\n" +
                                         "\tinner join estados on cidades.IDEstado = estados.ID\n" +
-                                        "where nfe.B09_dhEmi between '2022-05-01' and '2022-05-31' and nfe.IDMultiEmpresa = 0 and pessoas_enderecos.Tipo = 0\n" +
+                                        "where nfe.B09_dhEmi between '{@@dataini}' and '{@@datafim}' and nfe.IDMultiEmpresa = 0 and pessoas_enderecos.Tipo = 0\n" +
                                         "union\n" +
                                         "select distinct\n" +
                                         "\tpessoas.ID as COD_PART, \n" +

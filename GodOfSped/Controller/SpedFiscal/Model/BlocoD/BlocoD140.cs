@@ -6,9 +6,9 @@ public class BlocoD140
     
     public String COD_PART_CONSG { get; set; }
     
-    public String COD_MUN_DEST { get; set; }
+    public String COD_MUN_ORIG { get; set; }
     
-    public String COD_MUN_ORIG  { get; set; }
+    public String COD_MUN_DEST  { get; set; }
     
     public String IND_VEIC { get; set; }
     
@@ -33,7 +33,10 @@ public class BlocoD140
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_PART_CONSG}|{IND_VEIC}|{IND_NAV}|{VL_FRT_BRT}|{VL_DESP_CAR_DESC}|{COD_MUN_ORIG}|{VIAGEM}|{VL_OUT_LIQ}|{VL_DESP_PORT}|{COD_MUN_DEST}|{VL_FRT}|{COD_MOD}|{VEIC_ID}|{VL_FRT_MM}|";
+        String ret = $"|{REG}|{COD_PART_CONSG}|{COD_MUN_ORIG}|" +
+                     $"{COD_MUN_DEST}|{IND_VEIC}|{VEIC_ID}|" +
+                     $"{IND_NAV}|{VIAGEM}|{VL_FRT_LIQ}|{VL_DESP_PORT}|" +
+                     $"{VL_DESP_CAR_DESC}|{VL_OUT}|{VL_FRT_BRT}|{VL_FRT_MM}|";
         
         return ret;
     }

@@ -35,7 +35,10 @@ public class BlocoC495
 
     public String ToString()
     {
-        String ret = $"|{REG}|{VL_CANC}|{COD_ITEM}|{QTD}|{QTD_CANC}|{UNID}|{CST_ICMS}|{VL_DESC}|{ALIQ_ICMS}|{VL_ACMO}|{VL_BC_ICMS}|{VL_ICMS}|{VL_ISEN}|{VL_NT}|{VL_ICMS_ST}|";
+        String ret = $"|{REG}|{VL_CANC}|{COD_ITEM}|" +
+                     $"{QTD}|{QTD_CANC}|{UNID}|{CST_ICMS}|{VL_DESC}|" +
+                     $"{ALIQ_ICMS}|{VL_ACMO}|{VL_BC_ICMS}|{VL_ICMS}|{VL_ISEN}|" +
+                     $"{VL_NT}|{VL_ICMS_ST}|";
         
         return ret;
     }
