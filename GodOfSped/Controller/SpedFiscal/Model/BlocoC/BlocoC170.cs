@@ -32,7 +32,7 @@ public class BlocoC170
 
     public String VL_ICMS { get; set; }
 
-    public String VL_BC_ST_I { get; set; }
+    public String VL_BC_ICMS_ST { get; set; }
 
     public String ALIQ_ST { get; set; }
 
@@ -54,11 +54,11 @@ public class BlocoC170
 
     public String VL_BC_PIS { get; set;}
 
-    public String ALQ_PIS { get; set;}
+    public String ALQ_PIS_PER { get; set;}
 
     public String QUANT_BC_PIS { get; set;}
 
-    public String ALQ_PIS { get; set;}
+    public String ALQ_PIS_REAL { get; set;}
 
     public String VL_PIS { get; set;}
 
@@ -66,11 +66,11 @@ public class BlocoC170
 
     public String VL_BC_COFINS { get; set;}
 
-    public String ALIQ_COFINS { get; set;}
+    public String ALIQ_COFINS_PER { get; set;}
 
     public String QUANT_BC_COFINS { get; set;}
 
-    public String RALIQ_COFINS { get; set;}
+    public String ALIQ_COFINS_REAL { get; set;}
 
     public String VL_COFINS { get; set;}
 
@@ -81,7 +81,14 @@ public class BlocoC170
 
     public String ToString()
     {
-        String ret = $"|{REG}|{NUM_ITEM}|{COD_ITEM}|{DESCR_COMPL}|{QTD}|{UNID}|{VL_ITEM}|{VL_DESC}|{IND_MOV}|{CST_ICMS}|{CFOP}|{COD_NAT}|{VL_BC_ICMS}|{ALIQ_ICMS}|{VL_ICMS}||{VL_BC_ST_I}|{ALIQ_ST}|{VL_ICMS_ST}||{IND_APUR}|{CTS_IPI}|{COD_ENQ}|{VL_BC_IPI}|{ALIQ_IPI}|{VL_IPI}|{CST_PIS}|{VL_BC_PIS}|{ALQ_PIS}|{QUANT_BC_PIS}|{ALQ_PIS}|{VL_PIS}|{CST_COFINS}|{VL_BC_COFINS}|{ALIQ_COFINS}|{QUANT_BC_COFINS}|{RALIQ_COFINS}|{VL_COFINS}|{COD_CTA}|{VL_ABAT_NT}|";
+        String ret = $"|{REG}|{NUM_ITEM}|{COD_ITEM}|{DESCR_COMPL}|{QTD}|" +
+                     $"{UNID}|{VL_ITEM}|{VL_DESC}|{IND_MOV}|{CST_ICMS}|{CFOP}|" +
+                     $"{COD_NAT}|{VL_BC_ICMS}|{ALIQ_ICMS}|{VL_ICMS}||{VL_BC_ICMS_ST}|" +
+                     $"{ALIQ_ST}|{VL_ICMS_ST}||{IND_APUR}|{CTS_IPI}|{COD_ENQ}|" +
+                     $"{VL_BC_IPI}|{ALIQ_IPI}|{VL_IPI}|{CST_PIS}|{VL_BC_PIS}|{ALQ_PIS_PER}|" +
+                     $"{QUANT_BC_PIS}|{ALQ_PIS_REAL}|{VL_PIS}|{CST_COFINS}|{VL_BC_COFINS}|" +
+                     $"{ALIQ_COFINS_PER}|{QUANT_BC_COFINS}|{ALIQ_COFINS_REAL}|{VL_COFINS}|" +
+                     $"{COD_CTA}|{VL_ABAT_NT}|";
         
         return ret;
     }

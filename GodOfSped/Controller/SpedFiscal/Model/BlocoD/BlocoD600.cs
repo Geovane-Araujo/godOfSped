@@ -1,8 +1,8 @@
 ﻿namespace GodOfSped.Controller.SpedFiscal.Model.BlocoB;
 
-public class BlocoD610
+public class BlocoD600
 {
-    public String REG { get; set; } = "D610";
+    public String REG { get; set; } = "D600";
 
     public String COD_MOD { get; set; }
     
@@ -40,7 +40,10 @@ public class BlocoD610
 
     public String ToString()
     {
-        String ret = $"|{REG}|{COD_MOD}|{COD_MUN}|{SER}|{SUB}||{COD_CONS}|{QTD_CONS}|{DT_CONS}|{VL_DOC}|{VL_DESC}|{VL_SERV}|{VL_SERV_NT}|{VL_TERC}|{VL_DA}|{VL_BC_ICMS}|{VL_ICMS}|{VL_PIS}|{VL_COFINS}|";
+        String ret = $"|{REG}|{COD_MOD}|{COD_MUN}|{SER}|{SUB}||{COD_CONS}|" +
+                     $"{QTD_CONS}|{DT_CONS}|{VL_DOC}|{VL_DESC}|" +
+                     $"{VL_SERV}|{VL_SERV_NT}|{VL_TERC}|{VL_DA}|{VL_BC_ICMS}|" +
+                     $"{VL_ICMS}|{VL_PIS}|{VL_COFINS}|";
         
         return ret;
     }

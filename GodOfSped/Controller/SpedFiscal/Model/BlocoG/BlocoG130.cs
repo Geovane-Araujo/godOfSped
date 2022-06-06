@@ -19,13 +19,13 @@ public class BlocoG130
     public String DT_DOC { get; set; }
 
     public String NUM_DA { get; set; }
-
-    public String  { get; set; }
     
 
     public String ToString()
     {
-        String ret = $"|{REG}|{IND_EMIT}|{COD_PART}|{COD_MOD}|{SERIE}|{NUM_DOC}|{CHV_NFE_CTE}|{DT_DOC}|{NUM_DA}|";
+        String ret = $"|{REG}|{IND_EMIT}|{COD_PART}|" +
+                     $"{COD_MOD}|{SERIE}|{NUM_DOC}|{CHV_NFE_CTE}|" +
+                     $"{DT_DOC}|{NUM_DA}|";
         
         return ret;
     }

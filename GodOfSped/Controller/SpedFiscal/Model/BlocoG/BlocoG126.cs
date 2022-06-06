@@ -19,13 +19,13 @@ public class BlocoG126
     public String IND_PER_SAI { get; set; }
 
     public String VL_PARC_APROP { get; set; }
-
-    public String  { get; set; }
     
 
     public String ToString()
     {
-        String ret = $"|{REG}|{DT_INI}|{DT_FIM}|{NUM_PARC}|{VL_PARC_PASS}|{VL_TRIB_OC}|{VL_TOTAL}|{IND_PER_SAI}|{VL_PARC_APROP}|";
+        String ret = $"|{REG}|{DT_INI}|{DT_FIM}|{NUM_PARC}|" +
+                     $"{VL_PARC_PASS}|{VL_TRIB_OC}|{VL_TOTAL}|" +
+                     $"{IND_PER_SAI}|{VL_PARC_APROP}|";
         
         return ret;
     }
